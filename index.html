@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rar-tool-update-log</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 50px 0;
+        }
+        .widget {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 1s ease;
+        }
+        .widget:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .widget h2 {
+            margin-top: 0;
+        }
+        .widget p {
+            margin: 10px 0;
+        }
+        .widget a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .widget a:hover {
+            background: #0056b3;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="widget">
+            <h2>2024/07/04 - アップデート情報</h2>
+            <p>Useful headerを修正/.cppの追加を行いました。<br>
+            <h2>主な変更点</h2><br>
+            header.cppを追加し、header.hでは関数宣言のみを行うように変更しました。<br>
+            また、header.hでの宣言にexternをつけることで、LINK2001エラーの発生を防ぎました。<br>
+            header.cpp/header.hで、ask関数に出ていたエラーを修正しました。<br>
+            header.cpp/header.hにaskの種類を追加しました。<br>
+            <h2>追加したaskシリーズの関数</h2><br>
+            intask(const std::string& question, int& retur);<br>
+            ucharask(const std::string& question, unsigned char& retur);<br>
+            dwask(const std::string& question, DWORD& retur);<br>
+            byteask(const std::string& question, BYTE& retur);<br>
+            DWORDとBYTEに関しては、理論上は動きますが本当に動くかは試していません。<br>
+            ソースファイルはgithubにて公開中です。どうぞご確認ください。</p>
+            <a href="https://github.com/rarcns/cpp-useful-header/tree/main">Github</a>
+            <p>使用ライセンスは以下。これらのライセンスには法的効力があります</p>
+            <a href="https://rarcns.github.io/license-page/">MIT license</a>
+            <a href="https://rarcns.github.io/license-page/">Rar-license-general</a>
+        </div>
+        <div class="widget">
+            <h2>2024/07/04 - 告知関係</h2>
+            <p>アップデータ情報サイトの公開を開始しました。<br>
+            アップデート情報はtwitterでも告知しますが、こちらのサイトにも掲載します。<br></p>
+            <h2>関連リンク</h2>
+            <a href="https://x.com/RarRcns">Twitter</a><br>
+        </div>
+    </div>
+</body>
+</html>
